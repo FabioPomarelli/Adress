@@ -10,5 +10,13 @@ package Model;
  * @author pom
  */
 public class ElementSimple extends ElementCarnetAdresse {
+
+    /**
+     * 
+     */
+    @Override
+    public void afficher() {
+
+    }
     
 }

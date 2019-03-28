@@ -6,11 +6,29 @@
 package Model.ElementsDecorateur;
 
 import Model.ElementDecorateur;
+import Model.ElementSimple;
 
 /**
  *
  * @author pom
  */
 public class TelephoneMobile  extends ElementDecorateur {
+
+    /**
+     * Constructeur
+     * @param element représente le telephone fixe
+     * permet de lier le téléphone fixe et mobile
+     */
+    public void TelephoneMobile(ElementSimple element){
+        
+    }
+        
+    /**
+     * 
+     */
+    @Override
+    public void afficher(){
+        
+    }
     
 }

@@ -11,4 +11,23 @@ package Model;
  */
 public class ElementDecorateur extends ElementSimple {
     
+    public ElementSimple element;
+
+    /**
+     * Constructeur
+     * @param elemntSimple 
+     */
+    public void ElementDecorateur(ElementSimple elemntSimple){
+        
+    }
+ 
+    /**
+     * 
+     */
+    @Override
+    public void afficher(){
+        
+    }
+    
+    
 }

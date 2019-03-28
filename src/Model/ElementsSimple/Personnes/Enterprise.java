@@ -13,4 +13,11 @@ import Model.ElementSimple;
  */
 public class Enterprise extends ElementSimple {
     
+    /**
+     * 
+     */
+    @Override
+    public void afficher(){
+        
+    }
 }

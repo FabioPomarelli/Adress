@@ -6,6 +6,7 @@
 package Model.ElementsDecorateur;
 
 import Model.ElementDecorateur;
+import Model.ElementSimple;
 
 /**
  *
@@ -13,4 +14,19 @@ import Model.ElementDecorateur;
  */
 public class Email  extends ElementDecorateur {
     
+    /**
+     * Constructeur
+     * @param element 
+     */
+    public void Email(ElementSimple element){
+        
+    }
+   
+    /**
+     * 
+     */
+    @Override
+    public void afficher(){
+        
+    }
 }

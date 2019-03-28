@@ -6,6 +6,7 @@
 package Model.ElementsDecorateur;
 
 import Model.ElementDecorateur;
+import Model.ElementSimple;
 
 /**
  *
@@ -13,4 +14,21 @@ import Model.ElementDecorateur;
  */
 public class TelephoneFixe  extends ElementDecorateur{
     
+   
+    /**
+     * Constructeur
+     * @param element représente une adresse postale
+     * permet de lier le téléphone à l'adresse
+     */
+    public void TelephoneFixe(ElementSimple element){
+        
+    }
+    
+    /**
+     * 
+     */
+    @Override
+    public void afficher(){
+        
+    }
 }

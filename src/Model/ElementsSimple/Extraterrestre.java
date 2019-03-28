@@ -5,10 +5,12 @@
  */
 package Model.ElementsSimple;
 
+import Model.ElementSimple;
+
 /**
  *
  * @author pom
  */
-public class Extraterrestre {
+public class Extraterrestre extends ElementSimple {
     
 }

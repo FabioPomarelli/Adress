@@ -5,10 +5,45 @@
  */
 package Model;
 
+import java.util.HashSet;
+import java.util.Set;
+
 /**
  *
  * @author pom
  */
-public class ElementGroupe extends ElementCarnetAdresse{
+public abstract class ElementGroupe extends ElementCarnetAdresse{
     
+    Set<ElementCarnetAdresse> elementCarnetAdress = new HashSet<>();
+  
+  /**
+   * 
+   * @param element 
+   */
+  public void add(ElementCarnetAdresse element){
+      
+  }
+  
+  /**
+   * 
+   * @param element 
+   */
+  public void retirer(ElementCarnetAdresse element){
+      
+  }
+  
+  /**
+   * 
+   */
+  public void getGroupe(){
+      
+  }
+  
+  /**
+   * 
+   */
+  @Override
+  public void afficher(){
+      
+  }
 }

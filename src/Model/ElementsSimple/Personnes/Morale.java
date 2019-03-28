@@ -6,7 +6,7 @@
 package Model.ElementsSimple.Personnes;
 
 
-import Model.Personne;
+import Model.ElementsSimple.Personne;
 
 /**
  *
@@ -14,4 +14,21 @@ import Model.Personne;
  */
 public class Morale extends Personne {
     
+    /**
+     * Constructeur
+     * @param nom d'une personne morale
+     * @param prenom d'une personne morale
+     */
+    public Morale(String prenom, String nom){
+        this.setNom(nom);
+        this.setPrenom(prenom);
+    }
+    
+    /**
+     * 
+     */
+    @Override
+    public void afficher(){
+        System.out.println("Bonjour je suis " + this.getPrenom()+ " " + this.getNom());
+    }
 }

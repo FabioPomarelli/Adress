@@ -6,6 +6,7 @@
 package Model.ElementsDecorateur;
 
 import Model.ElementDecorateur;
+import Model.ElementSimple;
 
 /**
  *
@@ -13,4 +14,31 @@ import Model.ElementDecorateur;
  */
 public class AdressePostale extends ElementDecorateur {
     
+    private String adress;
+   
+    /**
+     * Constructeur
+     * @param adress
+     * @param element représente le type d'une personne (Morale, Entreprise etc...)
+     */
+    public void AdressePostale(String adress, ElementSimple element){
+        this.adress = adress;
+        this.element = element;
+    }
+
+    public String getAdress() {
+        return adress;
+    }
+
+    public void setAdress(String adress) {
+        this.adress = adress;
+    }
+    
+     /**
+     * 
+     */
+    @Override
+    public void afficher(){
+        System.out.println("J'habite : " + this.getAdress());
+    }
 }
