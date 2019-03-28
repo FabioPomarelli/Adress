@@ -14,6 +14,7 @@ import Model.ElementsSimple.Personne;
  */
 public class Morale extends Personne {
     
+    public Morale(){}
     /**
      * Constructeur
      * @param nom d'une personne morale

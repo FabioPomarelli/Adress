@@ -7,6 +7,7 @@ package Model.ElementsDecorateur;
 
 import Model.ElementDecorateur;
 import Model.ElementSimple;
+import java.io.PrintStream;
 
 /**
  *
@@ -15,7 +16,8 @@ import Model.ElementSimple;
 public class AdressePostale extends ElementDecorateur {
     
     private String adress;
-   
+  
+       
     /**
      * Constructeur
      * @param adress
@@ -25,7 +27,7 @@ public class AdressePostale extends ElementDecorateur {
         this.adress = adress;
         this.element = element;
     }
-
+    
     public String getAdress() {
         return adress;
     }
@@ -39,6 +41,6 @@ public class AdressePostale extends ElementDecorateur {
      */
     @Override
     public void afficher(){
-        System.out.println("J'habite : " + this.getAdress());
+        System.out.println(this.element + " J'habite au : " + this.getAdress());
     }
 }

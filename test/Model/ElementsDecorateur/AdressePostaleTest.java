@@ -49,6 +49,8 @@ public class AdressePostaleTest {
         ElementSimple element = new Morale("Bob", "Marley");
         AdressePostale instance = new AdressePostale();
         instance.AdressePostale(adress, element);
+        element.equals(instance);
+        System.out.println(element);
         element.afficher();
         instance.afficher();
         // TODO review the generated test code and remove the default call to fail.
