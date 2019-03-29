@@ -7,13 +7,14 @@ package Model.ElementsDecorateur;
 
 import Model.ElementDecorateur;
 import Model.ElementSimple;
+import com.google.gson.annotations.Expose;
 
 /**
  *
  * @author pom
  */
 public class TelephoneMobile  extends ElementDecorateur {
-
+    @Expose
     private String telephoneMobile;
 
     /**

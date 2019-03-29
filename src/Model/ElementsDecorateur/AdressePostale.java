@@ -7,6 +7,7 @@ package Model.ElementsDecorateur;
 
 import Model.ElementDecorateur;
 import Model.ElementSimple;
+import com.google.gson.annotations.Expose;
 
 /**
  *
@@ -14,6 +15,7 @@ import Model.ElementSimple;
  */
 public class AdressePostale extends ElementDecorateur {
 
+    @Expose
     private String adress;
 
     /**
@@ -27,7 +29,7 @@ public class AdressePostale extends ElementDecorateur {
     public AdressePostale(String adress, ElementSimple element) {
         this.adress = adress;
         this.element = element;
-  
+
     }
 
     public String getAdress() {
@@ -49,8 +51,8 @@ public class AdressePostale extends ElementDecorateur {
 
     @Override
     public String afficherStr() {
-        return ("Bonjour je suis de type AdressePostale " + this.getAdress() + "\n" + 
-                this.element.afficherStr());
-        
+        return ("Bonjour je suis de type AdressePostale " + this.getAdress() + "\n"
+                + this.element.afficherStr());
+
     }
 }

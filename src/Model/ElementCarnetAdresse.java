@@ -10,5 +10,15 @@ package Model;
  * @author pom
  */
 public abstract class ElementCarnetAdresse implements Affichable{
+/*
+    @Override
+    public void afficher() {
+
+    }
+
+    @Override
+    public String afficherStr() {
+        return "";
+    }*/
     
 }

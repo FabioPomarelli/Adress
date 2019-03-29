@@ -6,13 +6,16 @@
 package Model.ElementsSimple;
 
 import Model.ElementSimple;
+import com.google.gson.annotations.Expose;
 
 /**
  *
  * @author pom
  */
 public class Extraterrestre extends ElementSimple {
+    @Expose
     private String nom;
+    @Expose
     private String prenom;
 
     public Extraterrestre(String nom, String prenom){

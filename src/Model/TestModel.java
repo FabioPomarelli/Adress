@@ -34,14 +34,20 @@ public class TestModel {
         ElementCarnetAdresse em1 = new Email("fabio@fabio.com", ((ElementSimple) tm1));
         ElementCarnetAdresse em2 = new Email("fabio@fabio.com1", ((ElementSimple) em1));
 
-        //System.out.println(em2.afficherStr());
+        System.out.println(em2.afficherStr());
 
          System.out.println(toJSon(em2));
-         
+         System.out.println(toJSon(em2));
+         System.out.println(toJSon(em2));
+         System.out.println(toJSon(em2));
          
          System.out.println(fromJSon(toJSon(em2)).afficherStr());
          
-
+        ElementCarnetAdresse lecture = (ElementCarnetAdresse) fromJSon(toJSon(em2));
+        
+        lecture.afficher();
+        
+        System.out.println(lecture.afficherStr());
     }
 
     public static String toJSon(ElementCarnetAdresse el) {
@@ -52,13 +58,27 @@ public class TestModel {
     }
     
     public static ElementCarnetAdresse fromJSon(String json) {
-        //librarie de google!
+        //librarie de google! ElementCarnetAdresse.class
         Gson gson = new Gson();
         ElementCarnetAdresse obj = gson.fromJson(json, ElementCarnetAdresse.class);
         return obj;
       
     }
-    
+     public static ElementSimple fromJSon1(String json) {
+        //librarie de google! ElementCarnetAdresse.class
+        Gson gson = new Gson();
+        ElementSimple obj = gson.fromJson(json, ElementSimple.class);
+        return obj;
+      
+    }
+      public static ElementDecorateur fromJSon2(String json) {
+          System.out.println(json);
+        //librarie de google! ElementCarnetAdresse.class
+        Gson gson = new Gson();
+        ElementDecorateur obj = gson.fromJson(json, ElementDecorateur.class);
+        return obj;
+      
+    }
     
     
     
