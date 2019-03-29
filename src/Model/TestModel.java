@@ -76,7 +76,8 @@ public class TestModel {
                 .registerSubtype(Morale.class, "Morale")
                 .registerSubtype(Enterprise.class,"Enterprise")
                 .registerSubtype(CarnetAdresse.class, "CarnetAdresse")
-                
+                .registerSubtype(ElementGroupe.class, "ElementGroupe")
+                .registerSubtype(ElementGroupe.class, "ElementGroupe")
                 ;
         
         
@@ -99,6 +100,9 @@ public class TestModel {
 
         String gJson = gson1.toJson(groupe);
         System.out.println(gJson);
+        
+         System.out.println(((CarnetAdresse)groupe).afficherStr()   );
+        
         
         final CarnetAdresse em2lecture1 = gson1.fromJson(gJson, CarnetAdresse.class);
         System.out.println( "\n\n\n"+em2lecture1.afficherStr());
