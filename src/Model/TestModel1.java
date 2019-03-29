@@ -16,9 +16,12 @@ import Model.ElementsSimple.Extraterrestres.Marsien;
 import Model.ElementsSimple.Personne;
 import Model.ElementsSimple.Personnes.Enterprise;
 import Model.ElementsSimple.Personnes.Morale;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.google.gson.typeadapters.RuntimeTypeAdapterFactory;
+import java.io.File;
+import java.io.IOException;
 import java.util.Set;
 import org.json.simple.JSONObject;
 
@@ -28,7 +31,7 @@ import org.json.simple.JSONObject;
  */
 public class TestModel1 {
 
-    private static void test() {
+    private static void test()  {
 
         ElementCarnetAdresse m1 = new Morale("Fabio", "ooooo");
         ElementCarnetAdresse m2 = new Morale("Florent", "ttttt");
@@ -70,50 +73,39 @@ public class TestModel1 {
 
         System.out.println(((ElementSimple) m4).getGroupe().size());
 
-        
-        
-        
-        
-        
-        
-        
-        
-        
         ((ElementSimple) m4).afficher();
 
         JSONObject json = new JSONObject();
-      json.put("set", ((ElementSimple) m4).getGroupe());
-        Set deco=((ElementSimple) m4).getGroupe();
-        
-        for (Object ind:deco){
-            System.out.println(((ElementDecorateur)ind).toJson().toString());
+        json.put("set", ((ElementSimple) m4).getGroupe());
+        Set deco = ((ElementSimple) m4).getGroupe();
+
+        for (Object ind : deco) {
+            System.out.println(((ElementDecorateur) ind).toJson().toString());
         }
-       // json.put("set", ((ElementSimple) m4).getGroupe());
-        
-        
-        
-        
+        // json.put("set", ((ElementSimple) m4).getGroupe());
+
         String jsonString = json.toString();
 
         System.out.println(jsonString);
 
+        ObjectMapper mapper = new ObjectMapper(); // create once, reuse
+        Car a = new Car();
+        a.name="Fiat";
+// value = mapper.readValue(new File("data.json"), MyValue.class);
+// or:
+//value = mapper.readValue(new URL("http://some.com/api/entry.json"), MyValue.class);
+// or:
+//value = mapper.readValue("{\"name\":\"Bob\", \"age\":13}", MyValue.class);
+//And if we want to write JSON, we do the reverse:
+        
+    //mapper.writeValue(new File("result.json"), a);
+// or:
+    //    byte[] jsonBytes = mapper.writeValueAsBytes(a);
+// or:
+        String jsonString1 = mapper.writeValueAsString(a);
         
         
-        
-        
-        
-        
-        
-        
-        
-        
-        /* String gJson = gson.toJson(((ElementSimple) m4));
-       System.out.println(gJson);
-
-        //System.out.println(((CarnetAdresse)groupe).afficherStr()   );
-        //   final CarnetAdresse em2lecture1 = gson1.fromJson(gJson, CarnetAdresse.class);
-        //   System.out.println( "\n\n\n"+((CarnetAdresse)em2lecture1).afficherStr());
-         */
+        System.out.println(jsonString1);
     }
 
     public static void main(String[] args) {
