@@ -9,8 +9,8 @@ package Model;
  *
  * @author pom
  */
-public abstract class ElementCarnetAdresse implements Affichable{
-/*
+public  class ElementCarnetAdresse implements Affichable{
+
     @Override
     public void afficher() {
 
@@ -18,7 +18,7 @@ public abstract class ElementCarnetAdresse implements Affichable{
 
     @Override
     public String afficherStr() {
-        return "";
-    }*/
+        return "CIAO ***********************************************************";
+    }
     
 }

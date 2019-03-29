@@ -9,7 +9,7 @@ package Model;
  *
  * @author pom
  */
-public abstract class ElementSimple extends ElementCarnetAdresse {
+public  class ElementSimple extends ElementCarnetAdresse {
 
     /**
      * 

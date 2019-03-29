@@ -21,14 +21,14 @@ public class AdressePostale extends ElementDecorateur {
     /**
      * Constructeur
      *
-     * @param elemntSimple
      * @param adress
      * @param element représente le type d'une personne (Morale, Entreprise
      * etc...)
      */
     public AdressePostale(String adress, ElementSimple element) {
         this.adress = adress;
-        this.element = element;
+        this.setElement(element);
+        //this.setElementClass(nomClass);
 
     }
 
@@ -46,13 +46,13 @@ public class AdressePostale extends ElementDecorateur {
     @Override
     public void afficher() {
         System.out.println("Bonjour je suis de type AdressePostale " + this.getAdress());
-        this.element.afficher();
+        this.getElement().afficher();
     }
 
     @Override
     public String afficherStr() {
         return ("Bonjour je suis de type AdressePostale " + this.getAdress() + "\n"
-                + this.element.afficherStr());
+                + this.getElement().afficherStr());
 
     }
 }

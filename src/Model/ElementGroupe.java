@@ -5,6 +5,7 @@
  */
 package Model;
 
+import com.google.gson.annotations.Expose;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -13,7 +14,7 @@ import java.util.Set;
  * @author pom
  */
 public abstract class ElementGroupe extends ElementCarnetAdresse{
-    
+    @Expose
     Set<ElementCarnetAdresse> elementCarnetAdress = new HashSet<>();
   
   /**

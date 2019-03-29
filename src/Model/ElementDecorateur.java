@@ -5,32 +5,29 @@
  */
 package Model;
 
+import com.google.gson.annotations.Expose;
+
 /**
  *
  * @author pom
  */
-public class ElementDecorateur extends ElementSimple {
-    
-    public ElementSimple element;
+public abstract class ElementDecorateur extends ElementSimple {
 
-    /**
-     * Constructeur
-     * @param elemntSimple 
-     */
-    public void ElementDecorateur(ElementSimple elemntSimple){
-        this.element= elemntSimple;
+    @Expose
+    private ElementSimple element;
+
+    public ElementDecorateur() {
+
     }
- 
-    /**
-     * 
-     */
-    @Override
-    public void afficher(){
-        this.element.afficher();
+
+    public void setElement(ElementSimple element) {
+        this.element = element;
+
     }
-    @Override
-    public String afficherStr(){
-        return this.element.afficherStr();
+
+    public ElementSimple getElement() {
+        return this.element;
+
     }
-    
+
 }

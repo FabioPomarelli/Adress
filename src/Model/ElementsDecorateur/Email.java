@@ -13,20 +13,14 @@ import com.google.gson.annotations.Expose;
  *
  * @author pom
  */
-public class Email  extends ElementDecorateur {
+public class Email extends ElementDecorateur {
+
     @Expose
     private String email;
 
-    /**
-     * Constructeur
-     *
-     * @param email
-     * @param element représente le type d'une personne (Morale, Entreprise
-     * etc...)
-     */
     public Email(String email, ElementSimple element) {
         this.email = email;
-        this.element = element;
+        this.setElement(element);
     }
 
     public String getEmail() {
@@ -43,13 +37,14 @@ public class Email  extends ElementDecorateur {
     @Override
     public void afficher() {
         System.out.println("Bonjour je suis de type Email " + this.getEmail());
-        this.element.afficher();
+        this.getElement().afficher();
+
     }
 
     @Override
     public String afficherStr() {
-        return ("Bonjour je suis de type Email " + this.getEmail() + "\n" + 
-                this.element.afficherStr());
-        
+        return ("Bonjour je suis de type Email " + this.getEmail() + "\n"
+                + this.getElement().afficherStr());
+
     }
 }

@@ -26,7 +26,7 @@ public class TelephoneFixe  extends ElementDecorateur{
      */
     public TelephoneFixe(String telephoneFixe, ElementSimple element) {
         this.telephoneFixe = telephoneFixe;
-        this.element = element;
+        this.setElement(element);
     }
 
     public String getTelephoneFixe() {
@@ -43,13 +43,13 @@ public class TelephoneFixe  extends ElementDecorateur{
     @Override
     public void afficher() {
         System.out.println("Bonjour je suis de type TelephoneFixe " + this.getTelephoneFixe());
-        this.element.afficher();
+        this.getElement().afficher();
     }
 
     @Override
     public String afficherStr() {
         return ("Bonjour je suis de type TelephoneFixe " + this.getTelephoneFixe() + "\n"
-                + this.element.afficherStr());
+                + this.getElement().afficherStr());
 
     }
 }
