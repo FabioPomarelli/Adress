@@ -18,7 +18,7 @@ public class ElementDecorateur extends ElementSimple {
      * @param elemntSimple 
      */
     public void ElementDecorateur(ElementSimple elemntSimple){
-        
+        this.element= elemntSimple;
     }
  
     /**
@@ -26,7 +26,7 @@ public class ElementDecorateur extends ElementSimple {
      */
     @Override
     public void afficher(){
-        
+        this.element.afficher();
     }
     
     

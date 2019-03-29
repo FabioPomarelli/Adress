@@ -5,19 +5,29 @@
  */
 package Model.ElementsSimple.Personnes;
 
-import Model.ElementSimple;
+import Model.ElementsSimple.Personne;
 
 /**
  *
  * @author pom
  */
-public class Enterprise extends ElementSimple {
-    
+public class Enterprise extends Personne {
+
     /**
-     * 
+     * public Morale(){} /** Constructeur
+     *
+     * @param nom d'une personne morale
+     * @param prenom d'une personne morale
+     */
+    public Enterprise(String prenom, String nom) {
+        super(prenom,  nom);
+    }
+
+    /**
+     *
      */
     @Override
-    public void afficher(){
-        
+    public void afficher() {
+        System.out.println("Bonjour je suis " + this.getPrenom() + " " + this.getNom());
     }
 }

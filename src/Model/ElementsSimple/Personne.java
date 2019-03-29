@@ -16,6 +16,11 @@ public abstract class Personne extends ElementSimple {
     private String nom;
     private String prenom;
 
+    public Personne(String nom, String prenom){
+        this.setNom(nom);
+        this.setPrenom(prenom);
+    }
+    
     public String getNom() {
         return nom;
     }
@@ -31,6 +36,9 @@ public abstract class Personne extends ElementSimple {
     public void setPrenom(String prenom) {
         this.prenom = prenom;
     }
+    
+    
+    
     
     /**
      * 

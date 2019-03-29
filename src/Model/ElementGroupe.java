@@ -21,6 +21,7 @@ public abstract class ElementGroupe extends ElementCarnetAdresse{
    * @param element 
    */
   public void add(ElementCarnetAdresse element){
+      this.elementCarnetAdress.add(element);
       
   }
   
@@ -29,14 +30,14 @@ public abstract class ElementGroupe extends ElementCarnetAdresse{
    * @param element 
    */
   public void retirer(ElementCarnetAdresse element){
-      
+      this.elementCarnetAdress.remove(element);
   }
   
   /**
    * 
    */
-  public void getGroupe(){
-      
+  public Set getGroupe(){
+      return this.elementCarnetAdress;
   }
   
   /**
@@ -44,6 +45,9 @@ public abstract class ElementGroupe extends ElementCarnetAdresse{
    */
   @Override
   public void afficher(){
-      
+      for(Object obj:this.elementCarnetAdress){
+            ((ElementCarnetAdresse)(obj)).afficher();
+           
+        }
   }
 }

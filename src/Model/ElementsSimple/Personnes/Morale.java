@@ -14,15 +14,14 @@ import Model.ElementsSimple.Personne;
  */
 public class Morale extends Personne {
     
-    public Morale(){}
     /**
      * Constructeur
      * @param nom d'une personne morale
      * @param prenom d'une personne morale
      */
     public Morale(String prenom, String nom){
-        this.setNom(nom);
-        this.setPrenom(prenom);
+        super(nom, prenom);
+
     }
     
     /**
