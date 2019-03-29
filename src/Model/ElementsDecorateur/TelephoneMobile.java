@@ -14,21 +14,42 @@ import Model.ElementSimple;
  */
 public class TelephoneMobile  extends ElementDecorateur {
 
+    private String telephoneMobile;
+
     /**
      * Constructeur
-     * @param element représente le telephone fixe
-     * permet de lier le téléphone fixe et mobile
+     *
+     * @param telephoneMobile
+     * @param element représente le type d'une personne (Morale, Entreprise
+     * etc...)
      */
-    public void TelephoneMobile(ElementSimple element){
-        
+    public void TelephoneMobile(String telephoneMobile, ElementSimple element) {
+        this.telephoneMobile = telephoneMobile;
+        this.element = element;
     }
-        
+
+    public String getTelephoneMobile() {
+        return this.telephoneMobile;
+    }
+
+    public void setTelephoneMobile(String telephoneMobile) {
+        this.telephoneMobile = telephoneMobile;
+    }
+
     /**
-     * 
+     *
      */
     @Override
-    public void afficher(){
-        
+    public void afficher() {
+        System.out.println("Bonjour je suis de type TelephoneMobile " + this.getTelephoneMobile());
+        this.element.afficher();
+    }
+
+    @Override
+    public String afficherStr() {
+        return ("Bonjour je suis de type TelephoneMobile " + this.getTelephoneMobile() + "\n"
+                + this.element.afficherStr());
+
     }
     
 }

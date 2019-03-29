@@ -14,21 +14,41 @@ import Model.ElementSimple;
  */
 public class TelephoneFixe  extends ElementDecorateur{
     
-   
+    private String telephoneFixe;
+
     /**
      * Constructeur
-     * @param element représente une adresse postale
-     * permet de lier le téléphone à l'adresse
+     *
+     * @param telephoneFixe
+     * @param element représente le type d'une personne (Morale, Entreprise
+     * etc...)
      */
-    public void TelephoneFixe(ElementSimple element){
-        
+    public void TelephoneFixe(String telephoneFixe, ElementSimple element) {
+        this.telephoneFixe = telephoneFixe;
+        this.element = element;
     }
-    
+
+    public String getTelephoneFixe() {
+        return this.telephoneFixe;
+    }
+
+    public void setTelephoneFixe(String telephoneFixe) {
+        this.telephoneFixe = telephoneFixe;
+    }
+
     /**
-     * 
+     *
      */
     @Override
-    public void afficher(){
-        
+    public void afficher() {
+        System.out.println("Bonjour je suis de type TelephoneFixe " + this.getTelephoneFixe());
+        this.element.afficher();
+    }
+
+    @Override
+    public String afficherStr() {
+        return ("Bonjour je suis de type TelephoneFixe " + this.getTelephoneFixe() + "\n"
+                + this.element.afficherStr());
+
     }
 }

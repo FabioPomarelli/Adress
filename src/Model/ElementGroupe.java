@@ -47,7 +47,15 @@ public abstract class ElementGroupe extends ElementCarnetAdresse{
   public void afficher(){
       for(Object obj:this.elementCarnetAdress){
             ((ElementCarnetAdresse)(obj)).afficher();
-           
         }
+  }
+  
+  @Override
+  public String afficherStr(){
+      String app="";
+      for(Object obj:this.elementCarnetAdress){
+            app+=((ElementCarnetAdresse)(obj)).afficherStr();
+        }
+      return app;
   }
 }

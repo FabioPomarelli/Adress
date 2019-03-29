@@ -12,5 +12,5 @@ package Model;
 public interface Affichable {
     
     public void afficher();
-    
+    public String afficherStr();
 }

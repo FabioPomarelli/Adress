@@ -26,8 +26,14 @@ public class Enterprise extends Personne {
     /**
      *
      */
-    @Override
-    public void afficher() {
-        System.out.println("Bonjour je suis " + this.getPrenom() + " " + this.getNom());
+     @Override
+    public void afficher(){
+        System.out.println("Bonjour je suis de type Enterprise " + this.getPrenom() + " " + this.getNom());
     }
+    
+    @Override
+    public String afficherStr(){
+        return ("Bonjour je suis de type Enterprise " + this.getPrenom() + " " + this.getNom()+"\n");
+    }
+    
 }

@@ -7,40 +7,48 @@ package Model.ElementsDecorateur;
 
 import Model.ElementDecorateur;
 import Model.ElementSimple;
-import java.io.PrintStream;
 
 /**
  *
  * @author pom
  */
 public class AdressePostale extends ElementDecorateur {
-    
+
     private String adress;
-  
-       
+
     /**
      * Constructeur
+     *
      * @param adress
-     * @param element représente le type d'une personne (Morale, Entreprise etc...)
+     * @param element représente le type d'une personne (Morale, Entreprise
+     * etc...)
      */
-    public void AdressePostale(String adress, ElementSimple element){
+    public void AdressePostale(String adress, ElementSimple element) {
         this.adress = adress;
         this.element = element;
     }
-    
+
     public String getAdress() {
-        return adress;
+        return this.adress;
     }
 
     public void setAdress(String adress) {
         this.adress = adress;
     }
-    
-     /**
-     * 
+
+    /**
+     *
      */
     @Override
-    public void afficher(){
-        System.out.println(this.element + " J'habite au : " + this.getAdress());
+    public void afficher() {
+        System.out.println("Bonjour je suis de type AdressePostale " + this.getAdress());
+        this.element.afficher();
+    }
+
+    @Override
+    public String afficherStr() {
+        return ("Bonjour je suis de type AdressePostale " + this.getAdress() + "\n" + 
+                this.element.afficherStr());
+        
     }
 }

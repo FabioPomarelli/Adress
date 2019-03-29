@@ -17,12 +17,12 @@ public abstract class Personne extends ElementSimple {
     private String prenom;
 
     public Personne(String nom, String prenom){
-        this.setNom(nom);
-        this.setPrenom(prenom);
+        this.nom=nom;
+        this.prenom=prenom;
     }
     
     public String getNom() {
-        return nom;
+        return this.nom;
     }
 
     public void setNom(String nom) {
@@ -30,7 +30,7 @@ public abstract class Personne extends ElementSimple {
     }
 
     public String getPrenom() {
-        return prenom;
+        return this.prenom;
     }
 
     public void setPrenom(String prenom) {
@@ -45,6 +45,13 @@ public abstract class Personne extends ElementSimple {
      */
     @Override
     public void afficher(){
-        
+        System.out.println("Bonjour je suis de type Personne " + this.getPrenom() + " " + this.getNom());
     }
+    
+    @Override
+    public String afficherStr(){
+        return ("Bonjour je suis de type Personne " + this.getPrenom() + " " + this.getNom()+"\n");
+    }
+    
+    
 }

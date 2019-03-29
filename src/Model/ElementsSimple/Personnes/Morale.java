@@ -21,14 +21,19 @@ public class Morale extends Personne {
      */
     public Morale(String prenom, String nom){
         super(nom, prenom);
-
     }
     
     /**
      * 
      */
-    @Override
+      @Override
     public void afficher(){
-        System.out.println("Bonjour je suis " + this.getPrenom()+ " " + this.getNom());
+        System.out.println("Bonjour je suis de type Morale " + this.getPrenom() + " " + this.getNom());
     }
+    
+    @Override
+    public String afficherStr(){
+        return ("Bonjour je suis de type Morale " + this.getPrenom() + " " + this.getNom()+"\n");
+    }
+    
 }

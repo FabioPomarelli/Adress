@@ -28,6 +28,9 @@ public class ElementDecorateur extends ElementSimple {
     public void afficher(){
         this.element.afficher();
     }
-    
+    @Override
+    public String afficherStr(){
+        return this.element.afficherStr();
+    }
     
 }
