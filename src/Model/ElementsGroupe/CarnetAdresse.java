@@ -13,12 +13,5 @@ import Model.ElementGroupe;
  */
 public class CarnetAdresse extends ElementGroupe {
 
-    /**
-     * 
-     */
-    @Override
-    public void afficher() {
-
-    }
     
 }

@@ -5,9 +5,11 @@
  */
 package Model;
 
+import Model.ElementsDecorateur.Finale;
 import com.google.gson.annotations.Expose;
-import java.util.HashSet;
 import java.util.Set;
+import java.util.HashSet;
+import java.util.TreeSet;
 
 /**
  *
@@ -47,7 +49,7 @@ public abstract class ElementGroupe extends ElementCarnetAdresse{
   @Override
   public void afficher(){
       for(Object obj:this.elementCarnetAdress){
-            ((ElementCarnetAdresse)(obj)).afficher();
+            ((Finale)(obj)).afficher();
         }
   }
   
@@ -55,7 +57,7 @@ public abstract class ElementGroupe extends ElementCarnetAdresse{
   public String afficherStr(){
       String app="";
       for(Object obj:this.elementCarnetAdress){
-            app+=((ElementCarnetAdresse)(obj)).afficherStr();
+            app+=((Finale)(obj)).afficherStr();
         }
       return app;
   }
