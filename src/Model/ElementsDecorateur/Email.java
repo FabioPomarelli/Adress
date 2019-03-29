@@ -23,7 +23,7 @@ public class Email  extends ElementDecorateur {
      * @param element représente le type d'une personne (Morale, Entreprise
      * etc...)
      */
-    public void Email(String email, ElementSimple element) {
+    public Email(String email, ElementSimple element) {
         this.email = email;
         this.element = element;
     }

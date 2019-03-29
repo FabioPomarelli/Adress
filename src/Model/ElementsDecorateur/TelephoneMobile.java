@@ -23,7 +23,7 @@ public class TelephoneMobile  extends ElementDecorateur {
      * @param element représente le type d'une personne (Morale, Entreprise
      * etc...)
      */
-    public void TelephoneMobile(String telephoneMobile, ElementSimple element) {
+    public TelephoneMobile(String telephoneMobile, ElementSimple element) {
         this.telephoneMobile = telephoneMobile;
         this.element = element;
     }

@@ -19,13 +19,15 @@ public class AdressePostale extends ElementDecorateur {
     /**
      * Constructeur
      *
+     * @param elemntSimple
      * @param adress
      * @param element représente le type d'une personne (Morale, Entreprise
      * etc...)
      */
-    public void AdressePostale(String adress, ElementSimple element) {
+    public AdressePostale(String adress, ElementSimple element) {
         this.adress = adress;
         this.element = element;
+  
     }
 
     public String getAdress() {
