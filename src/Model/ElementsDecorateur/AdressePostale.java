@@ -8,6 +8,7 @@ package Model.ElementsDecorateur;
 import Model.ElementDecorateur;
 import Model.ElementSimple;
 import com.google.gson.annotations.Expose;
+import org.json.simple.JSONObject;
 
 /**
  *
@@ -28,6 +29,7 @@ public class AdressePostale extends ElementDecorateur {
     public AdressePostale(String adress, ElementSimple element) {
         this.adress = adress;
         this.setElement(element);
+        element.add(this);
         //this.setElementClass(nomClass);
 
     }
@@ -46,7 +48,7 @@ public class AdressePostale extends ElementDecorateur {
     @Override
     public void afficher() {
         System.out.println("Bonjour je suis de type AdressePostale " + this.getAdress());
-        this.getElement().afficher();
+        //this.getElement().afficher();
     }
 
     @Override
@@ -55,4 +57,11 @@ public class AdressePostale extends ElementDecorateur {
                 + this.getElement().afficherStr());
 
     }
+/*
+    @Override
+    public JSONObject toJson() {
+        JSONObject json = new JSONObject();
+        json.put("adress", this.adress);
+        return json;
+    }*/
 }

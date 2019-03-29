@@ -17,6 +17,7 @@ public class Finale extends ElementDecorateur {
 
     public Finale(ElementSimple element) {
         this.setElement(element);
+        element.add(this);
     }
 
     @Override

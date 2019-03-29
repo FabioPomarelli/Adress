@@ -8,6 +8,7 @@ package Model.ElementsDecorateur;
 import Model.ElementDecorateur;
 import Model.ElementSimple;
 import com.google.gson.annotations.Expose;
+import org.json.simple.JSONObject;
 
 /**
  *
@@ -21,6 +22,7 @@ public class Email extends ElementDecorateur {
     public Email(String email, ElementSimple element) {
         this.email = email;
         this.setElement(element);
+        element.add(this);
     }
 
     public String getEmail() {
@@ -37,7 +39,7 @@ public class Email extends ElementDecorateur {
     @Override
     public void afficher() {
         System.out.println("Bonjour je suis de type Email " + this.getEmail());
-        this.getElement().afficher();
+        //this.getElement().afficher();
 
     }
 
@@ -45,6 +47,12 @@ public class Email extends ElementDecorateur {
     public String afficherStr() {
         return ("Bonjour je suis de type Email " + this.getEmail() + "\n"
                 + this.getElement().afficherStr());
-
     }
+    /*
+     @Override
+    public JSONObject toJson() {
+        JSONObject json = new JSONObject();
+        json.put("adress", this.email);
+        return json;
+    }*/
 }

@@ -6,6 +6,7 @@
             <file>file:/home/pom/Documents/MARZO/28MARZO/AdressBookGitFinal/src/Model/TestModel.java</file>
             <file>file:/home/pom/Documents/MARZO/28MARZO/AdressBookGitFinal/src/Model/ElementsSimple/Extraterrestre.java</file>
             <file>file:/home/pom/Documents/MARZO/28MARZO/AdressBookGitFinal/src/Model/ElementsDecorateur/TelephoneFixe.java</file>
+            <file>file:/home/pom/Documents/MARZO/28MARZO/AdressBookGitFinal/src/Util/Validator.java</file>
             <file>file:/home/pom/Documents/MARZO/28MARZO/AdressBookGitFinal/src/Model/ElementsDecorateur/AdressePostale.java</file>
             <file>file:/home/pom/Documents/MARZO/28MARZO/AdressBookGitFinal/src/Model/ElementsDecorateur/Email.java</file>
             <file>file:/home/pom/Documents/MARZO/28MARZO/AdressBookGitFinal/src/Model/ElementsGroupe/CarnetAdresse.java</file>
@@ -19,6 +20,7 @@
             <file>file:/home/pom/Documents/MARZO/28MARZO/AdressBookGitFinal/src/Model/ElementsSimple/Personnes/Enterprise.java</file>
             <file>file:/home/pom/Documents/MARZO/28MARZO/AdressBookGitFinal/src/Model/ElementsSimple/Extraterrestres/Marsien.java</file>
             <file>file:/home/pom/Documents/MARZO/28MARZO/AdressBookGitFinal/nbproject/build-impl.xml</file>
+            <file>file:/home/pom/Documents/MARZO/28MARZO/AdressBookGitFinal/src/Model/TestModel1.java</file>
             <file>file:/home/pom/Documents/MARZO/28MARZO/AdressBookGitFinal/src/Model/ElementsDecorateur/Finale.java</file>
             <file>file:/home/pom/Documents/MARZO/28MARZO/AdressBookGitFinal/src/Model/ElementsSimple/Personnes/Morale.java</file>
             <file>file:/home/pom/Documents/MARZO/28MARZO/AdressBookGitFinal/src/Model/ElementsDecorateur/TelephoneMobile.java</file>

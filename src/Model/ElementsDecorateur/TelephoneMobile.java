@@ -27,6 +27,7 @@ public class TelephoneMobile  extends ElementDecorateur {
     public TelephoneMobile(String telephoneMobile, ElementSimple element) {
         this.telephoneMobile = telephoneMobile;
         this.setElement(element);
+        element.add(this);
     }
 
     public String getTelephoneMobile() {
@@ -43,7 +44,7 @@ public class TelephoneMobile  extends ElementDecorateur {
     @Override
     public void afficher() {
         System.out.println("Bonjour je suis de type TelephoneMobile " + this.getTelephoneMobile());
-        this.getElement().afficher();
+     //   this.getElement().afficher();
     }
 
     @Override

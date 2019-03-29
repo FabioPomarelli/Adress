@@ -8,6 +8,7 @@ package Model.ElementsDecorateur;
 import Model.ElementDecorateur;
 import Model.ElementSimple;
 import com.google.gson.annotations.Expose;
+import org.json.simple.JSONObject;
 
 /**
  *
@@ -27,6 +28,7 @@ public class TelephoneFixe  extends ElementDecorateur{
     public TelephoneFixe(String telephoneFixe, ElementSimple element) {
         this.telephoneFixe = telephoneFixe;
         this.setElement(element);
+        element.add(this);
     }
 
     public String getTelephoneFixe() {
@@ -43,7 +45,7 @@ public class TelephoneFixe  extends ElementDecorateur{
     @Override
     public void afficher() {
         System.out.println("Bonjour je suis de type TelephoneFixe " + this.getTelephoneFixe());
-        this.getElement().afficher();
+    //    this.getElement().afficher();
     }
 
     @Override
@@ -51,5 +53,11 @@ public class TelephoneFixe  extends ElementDecorateur{
         return ("Bonjour je suis de type TelephoneFixe " + this.getTelephoneFixe() + "\n"
                 + this.getElement().afficherStr());
 
-    }
+    }/*
+     @Override
+    public JSONObject toJson() {
+        JSONObject json = new JSONObject();
+        json.put("adress", this.telephoneFixe);
+        return json;
+    }*/
 }

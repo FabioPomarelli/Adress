@@ -5,7 +5,9 @@
  */
 package Model;
 
+import com.google.gson.Gson;
 import com.google.gson.annotations.Expose;
+import org.json.simple.JSONObject;
 
 /**
  *
@@ -16,9 +18,8 @@ public abstract class ElementDecorateur extends ElementSimple {
     @Expose
     private ElementSimple element;
 
-    public ElementDecorateur() {
 
-    }
+
 
     public void setElement(ElementSimple element) {
         this.element = element;
@@ -28,6 +29,12 @@ public abstract class ElementDecorateur extends ElementSimple {
     public ElementSimple getElement() {
         return this.element;
 
+    }
+    
+    public String toJson() {
+          Gson gson = new Gson();
+        String strJson = gson.toJson(this);
+        return strJson;
     }
 
 }
