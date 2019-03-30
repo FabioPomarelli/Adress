@@ -5,24 +5,29 @@
  */
 package Model.ElementsDecorateur;
 
-import Model.ElementDecorateur;
-import Model.ElementSimple;
-import com.google.gson.annotations.Expose;
-import org.json.simple.JSONObject;
 
 /**
  *
  * @author pom
  */
-public class Email extends ElementDecorateur {
+public class Email implements IElementDecorateur {
 
-    @Expose
+    public static final String SCLASS = "Email";
+    public final String OCLASS = "Email";
+    //@Expose
     private String email;
 
-    public Email(String email, ElementSimple element) {
+    public Email(String email) {
+
         this.email = email;
-        this.setElement(element);
-        element.add(this);
+
+    }
+
+    public Email(String[] email) {
+
+    }
+
+    public Email() {
     }
 
     public String getEmail() {
@@ -36,17 +41,17 @@ public class Email extends ElementDecorateur {
     /**
      *
      */
-    @Override
+    // @Override
     public void afficher() {
         System.out.println("Bonjour je suis de type Email " + this.getEmail());
         //this.getElement().afficher();
 
     }
 
-    @Override
+    // @Override
     public String afficherStr() {
-        return ("Bonjour je suis de type Email " + this.getEmail() + "\n"
-                + this.getElement().afficherStr());
+        return ("Bonjour je suis de type Email " + this.getEmail() + "\n");
+        //+ this.getElement().afficherStr());
     }
     /*
      @Override

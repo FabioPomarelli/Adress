@@ -5,18 +5,18 @@
  */
 package Model.ElementsDecorateur;
 
-import Model.ElementDecorateur;
-import Model.ElementSimple;
-import com.google.gson.annotations.Expose;
 import org.json.simple.JSONObject;
 
 /**
  *
  * @author pom
  */
-public class AdressePostale extends ElementDecorateur {
+public class AdressePostale implements IElementDecorateur {
 
-    @Expose
+    public static final String SCLASS = "AdressePostale";
+    public final String OCLASS = "AdressePostale";
+
+    // @Expose
     private String adress;
 
     /**
@@ -26,11 +26,16 @@ public class AdressePostale extends ElementDecorateur {
      * @param element représente le type d'une personne (Morale, Entreprise
      * etc...)
      */
-    public AdressePostale(String adress, ElementSimple element) {
+    public AdressePostale() {
+
+    }
+
+    public AdressePostale(String adress) {
         this.adress = adress;
-        this.setElement(element);
-        element.add(this);
-        //this.setElementClass(nomClass);
+
+    }
+
+    public AdressePostale(String[] adress) {
 
     }
 
@@ -45,23 +50,24 @@ public class AdressePostale extends ElementDecorateur {
     /**
      *
      */
-    @Override
+    //@Override
     public void afficher() {
         System.out.println("Bonjour je suis de type AdressePostale " + this.getAdress());
         //this.getElement().afficher();
     }
 
-    @Override
+    // @Override
     public String afficherStr() {
-        return ("Bonjour je suis de type AdressePostale " + this.getAdress() + "\n"
-                + this.getElement().afficherStr());
+        return ("Bonjour je suis de type AdressePostale " + this.getAdress() + "\n");
+        // + this.getElement().afficherStr());
 
     }
-/*
-    @Override
+
     public JSONObject toJson() {
         JSONObject json = new JSONObject();
+        json.put("AdressePostale", this);
         json.put("adress", this.adress);
+        //   json.put("AdressePostale", this);
         return json;
-    }*/
+    }
 }

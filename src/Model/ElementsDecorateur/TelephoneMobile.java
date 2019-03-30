@@ -5,16 +5,14 @@
  */
 package Model.ElementsDecorateur;
 
-import Model.ElementDecorateur;
-import Model.ElementSimple;
-import com.google.gson.annotations.Expose;
-
 /**
  *
  * @author pom
  */
-public class TelephoneMobile  extends ElementDecorateur {
-    @Expose
+public class TelephoneMobile implements IElementDecorateur {
+
+    public static final String SCLASS = "TelephoneMobile";
+    public final String OCLASS = "TelephoneMobile";
     private String telephoneMobile;
 
     /**
@@ -24,10 +22,16 @@ public class TelephoneMobile  extends ElementDecorateur {
      * @param element représente le type d'une personne (Morale, Entreprise
      * etc...)
      */
-    public TelephoneMobile(String telephoneMobile, ElementSimple element) {
+    public TelephoneMobile(String telephoneMobile) {
         this.telephoneMobile = telephoneMobile;
-        this.setElement(element);
-        element.add(this);
+
+    }
+
+    public TelephoneMobile(String[] telephoneMobile) {
+
+    }
+
+    public TelephoneMobile() {
     }
 
     public String getTelephoneMobile() {
@@ -41,17 +45,17 @@ public class TelephoneMobile  extends ElementDecorateur {
     /**
      *
      */
-    @Override
+    // @Override
     public void afficher() {
         System.out.println("Bonjour je suis de type TelephoneMobile " + this.getTelephoneMobile());
-     //   this.getElement().afficher();
+        //   this.getElement().afficher();
     }
 
-    @Override
+    // @Override
     public String afficherStr() {
-        return ("Bonjour je suis de type TelephoneMobile " + this.getTelephoneMobile() + "\n"
-                + this.getElement().afficherStr());
+        return ("Bonjour je suis de type TelephoneMobile " + this.getTelephoneMobile() + "\n");
+        //+ this.getElement().afficherStr());
 
     }
-    
+
 }

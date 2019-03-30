@@ -5,30 +5,29 @@
  */
 package Model.ElementsDecorateur;
 
-import Model.ElementDecorateur;
-import Model.ElementSimple;
-import com.google.gson.annotations.Expose;
-import org.json.simple.JSONObject;
+
 
 /**
  *
  * @author pom
  */
-public class TelephoneFixe  extends ElementDecorateur{
-    @Expose
+public class TelephoneFixe implements IElementDecorateur {
+
+    public static final String SCLASS = "TelephoneFixe";
+    public final String OCLASS = "TelephoneFixe";
     private String telephoneFixe;
 
-    /**
-     * Constructeur
-     *
-     * @param telephoneFixe
-     * @param element représente le type d'une personne (Morale, Entreprise
-     * etc...)
-     */
-    public TelephoneFixe(String telephoneFixe, ElementSimple element) {
+   
+    public TelephoneFixe(String telephoneFixe) {
         this.telephoneFixe = telephoneFixe;
-        this.setElement(element);
-        element.add(this);
+
+    }
+
+    public TelephoneFixe(String[] telephoneFixe) {
+
+    }
+
+    public TelephoneFixe() {
     }
 
     public String getTelephoneFixe() {
@@ -42,22 +41,16 @@ public class TelephoneFixe  extends ElementDecorateur{
     /**
      *
      */
-    @Override
+    // @Override
     public void afficher() {
         System.out.println("Bonjour je suis de type TelephoneFixe " + this.getTelephoneFixe());
-    //    this.getElement().afficher();
+        //    this.getElement().afficher();
     }
 
-    @Override
+    //@Override
     public String afficherStr() {
-        return ("Bonjour je suis de type TelephoneFixe " + this.getTelephoneFixe() + "\n"
-                + this.getElement().afficherStr());
+        return ("Bonjour je suis de type TelephoneFixe " + this.getTelephoneFixe() + "\n");
+        //+ this.getElement().afficherStr());
 
-    }/*
-     @Override
-    public JSONObject toJson() {
-        JSONObject json = new JSONObject();
-        json.put("adress", this.telephoneFixe);
-        return json;
-    }*/
+    }
 }
